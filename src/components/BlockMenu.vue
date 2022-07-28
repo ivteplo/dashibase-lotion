@@ -92,7 +92,7 @@ document.addEventListener('keydown', (event:KeyboardEvent) => {
     open.value = false
     searchTerm.value = ''
     active.value = 0
-  } else if (event.key.match(/^([a-zA-Z]|[0-9]| )$/)) {
+  } else if (event.key.match(/^([a-zA-Z]|[0-9]| )$/) && !event.ctrlKey && !event.altKey) {
     // Alphanumeric searches menu
     searchTerm.value += event.key
     active.value = 0
